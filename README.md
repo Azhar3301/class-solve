@@ -43,26 +43,20 @@ int n = 1000000;
                 t /= 10;
             }
             if (s <= n) g[s] = true;
-        }
-
-        boolean[] p = new boolean[n + 1];
+        }boolean[] p = new boolean[n + 1];
         Arrays.fill(p, true);
         p[0] = p[1] = false;
-
-        for (int i = 2; i * i <= n; i++) {
+  for (int i = 2; i * i <= n; i++) {
             if (p[i]) {
                 for (int j = i * i; j <= n; j += i) p[j] = false;
             }
         }
-
-        int[] pre = new int[n + 1];
+  int[] pre = new int[n + 1];
         for (int i = 1; i <= n; i++) {
             pre[i] = pre[i - 1] + ((!g[i] && p[i]) ? 1 : 0);
         }
-
         Scanner sc = new Scanner(System.in);
         int q = sc.nextInt();
-
         while (q-- > 0) {
             int a = sc.nextInt();
             int b = sc.nextInt();
