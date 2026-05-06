@@ -32,12 +32,9 @@ public int sumOfTheDigitsOfHarshadNumber(int x) {
 
 problem 3:
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
-
-        int n = 1000000;
-
+int n = 1000000;
         boolean[] g = new boolean[n + 1];
         for (int i = 1; i <= n; i++) {
             int s = i, t = i;
